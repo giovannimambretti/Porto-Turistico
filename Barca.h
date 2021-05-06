@@ -1,3 +1,4 @@
+
 #pragma once
 #include <string>    // utilizza gli oggetti di Classe string
 
@@ -15,14 +16,20 @@ class Barca
 
  public:
 
- Barca(voidnome, string _nazione, float _lunghezza, float _stazza, bool _vela);
+ Barca(void);
+ Barca (string  _nome, string _nazione, float _lunghezza, float _stazza, bool _vela);
 
- void getNome(string _nome) ;
- void getNazione(string _nazione);
- float g
-);
- Barca (string  _
-etLunghezza(void);
+ void setNome(string _nome);  //correzione metodo set
+ void setNazione(string _Nazione);  //correzione metodo set
+ void setLunghezza(float _lunghezza); //implementazione metodi set 
+ void setStazza(float _stazza);//implementazione metodi set 
+
+ 
+ string getNome(void);    //aggiunta metodo getNome
+ string getNazione(void);  //aggiunta metodo getNazione
+ float getLunghezza(void);
  float getStazza(void) ;
  bool isVela(void);
 };
+
+
