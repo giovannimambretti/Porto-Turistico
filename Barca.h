@@ -1,39 +1,28 @@
-#include <cstring>
-#include <cstdio>
+#pragma once
+#include <string>    // utilizza gli oggetti di Classe string
+
+using namespace std; // serve per non dover sempre dereferenziare gli oggetti di std
 
 class Barca
 {
  private:
 
- char nome[32];
- char nazione[16];
+ string nome;      // utilizzo di oggetto string per rappresentare una stringa di caratteri
+ string nazione;
  float lunghezza;
  float stazza;
  bool vela;
 
  public:
 
- Barca(void)
- {
-  strcpy(nome, "");
-  strcpy(nazione, "???");
-  lunghezza = 0;
-  stazza = 0;
-  vela = false;
- }
+ Barca(voidnome, string _nazione, float _lunghezza, float _stazza, bool _vela);
 
- Barca (char _nome[], char _nazione[], float _lunghezza, float _stazza, bool _vela)
- {
-  strcpy(nome, _nome);
-  strcpy(nazione, _nazione);
-  lunghezza = _lunghezza;
-  stazza = _stazza;
-  vela = _vela;
- }
-
- void getNome(char* _nome) { strcpy(_nome, nome); }
- void getNazione(char* _nazione) { strcpy(_nazione, nazione); }
- float getLunghezza(void) { return lunghezza; }
- float getStazza(void) { return stazza; }
- bool isVela(void) { return vela; }
+ void getNome(string _nome) ;
+ void getNazione(string _nazione);
+ float g
+);
+ Barca (string  _
+etLunghezza(void);
+ float getStazza(void) ;
+ bool isVela(void);
 };
