@@ -21,8 +21,12 @@ using namespace std;
   vela = _vela;
  }
 
- void Barca::getNome(string _nome) { _nome = nome; }
- void Barca::getNazione(string _nazione) { _nazione = nazione; }
- float Barca::getLunghezza(void) { return lunghezza; }
- float Barca::getStazza(void) { return stazza; }
- bool Barca::isVela(void) { return vela; }
+ void Barca::setNome(string _nome) {nome= _nome;}
+ void Barca::setNazione(string _nazione) {nazione= _nazione;}
+ void Barca::setLunghezza(float _lunghezza ) {lunghezza= _lunghezza;}
+ void Barca::setStazza(float _stazza) {nome= _stazza;}
+ string Barca::getNome(void){return nome;}
+ string Barca::getNazione(void){return nazione;}
+ float Barca::getLunghezza(void){return lunghezza;}
+ float Barca::getStazza(void){return stazza;}
+ bool Barca::isVela(void){return vela;}
