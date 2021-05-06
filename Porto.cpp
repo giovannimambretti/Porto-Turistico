@@ -1,6 +1,5 @@
 #include "Barca.h"
 #include "Porto.h"
-
  Porto::Porto(void)
  {
   for (int posto=0; posto<100; posto++)
@@ -52,9 +51,9 @@
   occupato[posto-1] = false;
 
   if (barche[posto-1].isVela())
-    return giorni*TARIFFA_VELA*barche[posto-1].getLunghezza();
+    return giorni*tariffa_vela*barche[posto-1].getLunghezza();
   else
-	  return giorni*TARIFFA_MOTORE*barche[posto-1].getStazza();
+	  return giorni*tariffa_motore*barche[posto-1].getStazza();
  }
 
  Barca Porto::informazioni(int posto)
@@ -83,7 +82,16 @@
 	     }
  return numero;
  }
-
-
-const float Porto::TARIFFA_VELA = 10; // per metro al giorno
-const float Porto::TARIFFA_MOTORE = 20; // per tonnellata al giorno
+ void Porto::setTariffa_vela(float tv){tariffa_vela=tv;};
+ void Porto::setTariffa_motore(float tm){tariffa_motore=tm;};
+ float Porto::getTariffa_vela(void){return tariffa_vela;}
+ float Porto::getTariffa_motore(void){return tariffa_motore;}
+ 
+Barca Porto::modifica(int posto, string _nome, string _nazione,float _lunghezza,float _stazza)
+{
+	barche[posto].setNome(_nome);
+	barche[posto].setNazione(_nazione);
+	barche[posto].setLunghezza(_lunghezza);
+	barche[posto].setStazza(_stazza);
+	return barche[posto-1];
+ }
