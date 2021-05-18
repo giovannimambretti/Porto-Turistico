@@ -7,14 +7,14 @@ using namespace std;
 class Porto
 {
  private:
- Barca barche[100];
- bool occupato[100];
+ 
 
   float tariffa_vela;
   float tariffa_motore;
 
  public:
-
+ Barca barche[100];
+ bool occupato[100];
  Porto(void);
  
  int arrivo(Barca barca);
