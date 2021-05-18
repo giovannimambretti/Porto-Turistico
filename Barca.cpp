@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Barca.h"
 #include <string>
 
